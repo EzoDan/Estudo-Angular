@@ -1,0 +1,17 @@
+<div class="class">
+    <p>treinao form</p>
+
+    <form>
+        <input type="text" 
+        [(ngModel)]="name"
+        name="name"
+        placeholder="digite o seu nome porra">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <p>o nome é = {{name}}</p>
+    <div *ngIf="name === 'ezo'">
+        <p>AAAAAAAAAAAAAAAAAAAAAA</p>
+    </div>
+    
+</div>

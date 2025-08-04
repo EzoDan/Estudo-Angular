@@ -1,14 +1,16 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { FirstComponent } from "./components/first-component/first-component";
-import { ParentData } from "./components/parent-data/parent-data";
-import { Directives } from "./components/directives/directives";
-import { CondRend } from "./components/cond-rend/cond-rend";
-import { Events } from "./components/events/events";
+import { RouterModule } from '@angular/router';
+import { HttpHeaders, HttpClient } from '@angular/common/http';
+
+
+//import { AppRoutingModule } from './app.routes'; usar pro outro modo la
+
+//provideHttpClient(withInterceptorsFromDi())
 
 @Component({
   selector: 'app-root',
-  imports: [FirstComponent, ParentData, Directives, CondRend, Events],
+  standalone: true,
+  imports: [ RouterModule],
   templateUrl: './app.html',
   styleUrl: './app.scss',
   host: {

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-first-component',
+  standalone: true,
   imports: [],
   templateUrl: './first-component.html',
   styleUrl: './first-component.scss'

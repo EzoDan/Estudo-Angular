@@ -1,0 +1,15 @@
+<div class="class">
+    <h2>Lista de coisas</h2> 
+    <ul>
+        <li *ngFor="let coisa of coisas">
+            Nome: {{coisa.name}} -- Tipo: {{coisa.moraEm}} 
+            <p> 
+                <button (click)="showInfo(coisa)">escrever</button> 
+                <button (click)="removeFromList(coisa)">apagar</button>
+            </p> 
+        </li>
+    </ul>
+    <h3>{{detalhesDoEzo}} <button (click)="hideInfo()">Esconder</button></h3>
+</div>
+
+ 
