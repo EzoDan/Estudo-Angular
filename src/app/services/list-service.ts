@@ -21,7 +21,11 @@ export class List {
   }
 
   getAll(): Observable<Coisa[]>{
-      return this.http.get<Coisa[]>(this.apiUrl);
+    return this.http.get<Coisa[]>(this.apiUrl);
+  }
+
+  getItem(id:Number): Observable<Coisa>{
+    return this.http.get<Coisa>(`${this.apiUrl}/${id}`); 
   }
 
 }

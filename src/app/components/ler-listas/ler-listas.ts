@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router'; // precisa importar isso
 
 import { Coisa } from '../../Coisa';
 import { List } from '../../services/list-service';
@@ -8,7 +9,7 @@ import { OnInit } from '@angular/core';
 @Component({
   selector: 'app-ler-listas',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './ler-listas.html',
   styleUrl: './ler-listas.scss'
 })
