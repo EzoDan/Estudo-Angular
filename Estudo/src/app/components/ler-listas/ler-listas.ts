@@ -33,11 +33,26 @@ export class LerListas implements OnInit{
   }
 
   removeFromList(coisa: Coisa){
-    this.coisas = this.listService.remove(this.coisas, coisa);
+    this.coisas = this.listService.remove1(this.coisas, coisa);
+  }
+  removeFromListHTTP(coisa: Coisa){
+    this.coisas = this.coisas.filter((a) => coisa.name !== a.name);
+    this.listService.removeHTTP(coisa.id).subscribe();
   }
 
   //pegar do banco de dados
   getPassaros(): void{          //esperar fazer o metodo(concretizar)
     this.listService.getAll().subscribe((coisas) => (this.coisas = coisas));
   }
+
+
+
+/*
+  {"id": 1, "name": "Pomba", "moraEm": "cidade"},
+  {"id": 2, "name": "Macarrao", "moraEm": "caixa"},
+  {"id": 3, "name": "Cacto", "moraEm": "deserto"},
+  {"id": 4, "name": "Aguia", "moraEm": "montanha"},
+  {"id": 5, "name": "oruããã", "moraEm": "ã"},
+  {"id": 6, "name": "Camelo", "moraEm": "deserto"}
+*/
 }

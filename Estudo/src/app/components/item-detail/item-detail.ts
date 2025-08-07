@@ -13,14 +13,13 @@ import { List } from '../../services/list-service';
 })
 export class ItemDetail {  // o ? diz que o objeto pode ou n vir
   coisa?:Coisa;
-
                     //precisa inicializar p rodar
   constructor(private listService: List, private route: ActivatedRoute){
-    this.getAnimal();
+    this.getCoisa();
   }
 
   //pegar info da url
-  getAnimal(){
+  getCoisa(){
     const id = Number(this.route.snapshot.paramMap.get("id"));
     this.listService.getItem(id).subscribe((coisa) => (this.coisa = coisa));
   }

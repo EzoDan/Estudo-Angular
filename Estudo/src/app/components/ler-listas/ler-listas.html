@@ -5,7 +5,7 @@
             Nome: <a routerLink="/listas/{{coisa.id}}">{{coisa.name}}</a> -- Tipo: {{coisa.moraEm}} 
             <p> 
                 <button (click)="showInfo(coisa)">escrever</button> 
-                <button (click)="removeFromList(coisa)">apagar</button>
+                <button (click)="removeFromListHTTP(coisa)">apagar</button>
             </p> 
         </li>
     </ul>
