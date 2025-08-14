@@ -1,15 +1,31 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'calibri';
-    box-sizing: border-box;
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    border-bottom: 1px solid #000;
 }
-
-a {
-    text-decoration: none;
+.brand, .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.brand img {
+    width: 50px;
+    margin-right: 10px;
+}
+.brand h2{
     color: #444;
-    transition: 0.4s;
 }
-a:hover {
-    color: yellowgreen;
+.brand:hover > h2{
+    color: yellow;
+}
+.nav-links li{
+    margin-right: 1em;
+    list-style: none;
+}
+#add a{
+    color: rgb(255, 0, 0);
+}
+#add a:hover{
+    color: white;
 }
