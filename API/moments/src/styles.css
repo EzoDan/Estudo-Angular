@@ -12,3 +12,25 @@ a {
 a:hover {
     color: yellowgreen;
 }
+/*FORM*/
+form {
+    width: 450ox;
+    margin: 0 auto;
+    padding: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    text-align: center;
+}
+input, textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    resize: vertical;
+    width: 400px;
+    align-self: center;
+}
