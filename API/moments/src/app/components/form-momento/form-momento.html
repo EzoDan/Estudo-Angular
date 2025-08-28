@@ -1,10 +1,26 @@
-<form>
+<form (ngSubmit)="onSubmit()" class="form-momento" [formGroup]="momentoForm" #formDir="ngForm">
     <div class="form-group">
         <label for="title">Título:</label>
-        <input type="text" id="title" name="title" placeholder="Título" required>
+        <input type="text" id="title" name="title" placeholder="Título" formControlName="title" required>
+        
         <label for="description">Descrição:</label>
-        <textarea placeholder="O que aconteceu lá?"></textarea>
+        <textarea placeholder="O que aconteceu lá?" formControlName="description"></textarea>
     </div>
+    @if (title.invalid && formDir.submitted) {
+        <div class="error-message">
+        @if (title.errors?.['required']) {
+            <p>O título é obrigatório.</p>
+        }
+        </div>
+    }
+    @if (description.invalid && formDir.submitted) {
+        <div class="error-message">
+        @if (description.errors?.['required']) {
+            <p>a descricao é obrigatória.</p>
+        }
+        </div>
+    }
+    
     <div class="form-group">
         <label for="image">Foto mais braba</label>
         <input type="file" id="image" name="image" accept="image/*">
