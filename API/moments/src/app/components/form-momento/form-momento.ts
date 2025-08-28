@@ -26,7 +26,10 @@ export class FormMomento implements OnInit {
 required: any;
 
   onSubmit() {
-  console.log('Form submitted');
+    if(this.momentoForm.invalid) {
+      return
+    }
+    console.log('Form submitted');
   }
 
   
